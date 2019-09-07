@@ -2,7 +2,7 @@
 
     
     <mat-card-content class="text-center img-fluid rounded mx-auto">
-            <img mat-card-image src="../../assets/twitterIcon.png" alt="twitterIcon" class="icon-size text-center ml-1" >
+            <img mat-card-image [src]="imageURL" alt="icon" class="icon-size text-center" >
     </mat-card-content>
     <mat-card-header class="">
             <!-- <div mat-card-avatar class="example-header-image"></div> -->
@@ -11,8 +11,8 @@
           </mat-card-header>
     <mat-card-actions class="text-center mx-auto">
 
-      <button mat-button>delete data</button>
-      <button mat-button>get data</button>
+      <button mat-raised-button color="warn">DELETE</button>
+      <button mat-raised-button color="accent">REQUEST</button>
     </mat-card-actions>
   </mat-card>
 
@@ -25,7 +25,8 @@
         background:lightgray;
     }
     .icon-size {
-        width:12em;
+        width:8em;
+        padding-top:2em;
     }
     .mat-card-header-text {
         text-align:center !important;
