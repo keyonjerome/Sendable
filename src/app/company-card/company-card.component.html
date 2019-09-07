@@ -1,4 +1,4 @@
-<mat-card class="company-card">
+<mat-card class="company-card"[ngStyle]="cardStyle">
 
     
     <mat-card-content class="text-center img-fluid rounded mx-auto">
@@ -12,7 +12,7 @@
     <mat-card-actions class="text-center mx-auto">
 
       <button mat-raised-button color="warn">DELETE</button>
-      <button mat-raised-button color="accent">REQUEST</button>
+      <button mat-raised-button color="primary">REQUEST</button>
     </mat-card-actions>
   </mat-card>
 
