@@ -10,7 +10,7 @@ import {MatIconModule} from '@angular/material';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 // 1. Import the libs you need
-import { AngularFireModule } from '@angular/fire';
+import { AngularFireModule, FirebaseNameOrConfigToken } from '@angular/fire';
 import { AngularFirestoreModule, AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
@@ -22,8 +22,7 @@ import {MatListModule} from '@angular/material/list';
 import { HomeComponent } from './home/home.component';
 import {MatCardModule} from '@angular/material/card';
 
-var firebase: FirebaseConfig;
-
+const firebaseConfig = new FirebaseConfig().getConfig();
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,10 +44,13 @@ var firebase: FirebaseConfig;
     AngularFireAuthModule,
     AngularFireStorageModule,
     MatSidenavModule,
-    AngularFireModule.initializeApp(FirebaseConfig),
+    AngularFireModule.initializeApp(firebaseConfig),
     RouterModule
   ],
   providers: [FirebaseConfig],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+
+}

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Router} from '@angular/router';
+import { Router, CanActivate} from '@angular/router';
 import {auth} from 'firebase/app';
 import {AngularFireAuth} from '@angular/fire/auth';
 import {
@@ -15,8 +15,13 @@ import {User} from './user.model';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
-
+export class AuthService implements CanActivate {
+  data:{
+    uid: string,
+    email: string,
+    displayName: string,
+    photoURL: string
+  };
   user$:Observable<User>;
   constructor(
     private afAuth:AngularFireAuth,
@@ -49,14 +54,22 @@ export class AuthService {
 
     const userRef:AngularFirestoreDocument<User> = this.afs.doc(`users/${user.uid}`);
 
-    const data = {
+    this.data = {
       uid: user.uid,
       email: user.email,
       displayName: user.displayName,
       photoURL: user.photoURL
     };
-    console.log(data.uid,data.email,data.displayName,data.photoURL);
-    return userRef.set(data, {merge: true});
+    console.log(this.data.uid,this.data.email,this.data.displayName,this.data.photoURL);
+    return userRef.set(this.data, {merge: true});
+  }
+  canActivate(): boolean {
+    if (this.data == undefined)
+    {
+      this.router.navigate(['/']);
+      return false;
+    }
+    return true;
   }
 
 }
