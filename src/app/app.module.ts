@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
@@ -17,9 +18,14 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { FirebaseConfig } from './app-config.model';
 import {MatDialogModule} from '@angular/material/dialog';
 import { APP_INITIALIZER } from '@angular/core';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatListModule} from '@angular/material/list';
 import { HomeComponent } from './home/home.component';
 import {MatCardModule} from '@angular/material/card';
+import {ScrollingModule} from '@angular/cdk/scrolling';
+import { CompanyCardComponent } from './company-card/company-card.component';
+import {MatInputModule} from '@angular/material/input'; 
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 const firebaseConfig = new FirebaseConfig().getConfig();
 @NgModule({
@@ -28,23 +34,31 @@ const firebaseConfig = new FirebaseConfig().getConfig();
     LoginComponent,
     FrontPageComponent,
 
-    HomeComponent
+    HomeComponent,
+
+    CompanyCardComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    FlexLayoutModule,
     AppRoutingModule,
     MatButtonModule,
     MatCardModule,
     MatDialogModule,
+    MatFormFieldModule,
     MatToolbarModule,
     MatIconModule,
     MatListModule,
+    MatInputModule,
     AngularFirestoreModule,
     AngularFireAuthModule,
     AngularFireStorageModule,
     MatSidenavModule,
     AngularFireModule.initializeApp(firebaseConfig),
-    RouterModule
+    RouterModule,
+    ScrollingModule,
+
   ],
   providers: [FirebaseConfig],
   bootstrap: [AppComponent]
