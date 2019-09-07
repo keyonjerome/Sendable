@@ -11,6 +11,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule, AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { SideBarComponent } from './side-bar/side-bar.component';
 
 // 2. Add your credentials from step 1
 const firebaseConfig = {
@@ -29,6 +30,7 @@ const firebaseConfig = {
     AppComponent,
     LoginComponent,
     FrontPageComponent,
+    SideBarComponent,
   ],
   imports: [
     BrowserModule,
