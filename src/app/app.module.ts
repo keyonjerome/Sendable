@@ -11,18 +11,22 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule, AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
-
+import { FirebaseConfig } from './app-config.model';
+import { APP_INITIALIZER } from '@angular/core';
 // 2. Add your credentials from step 1
-const firebaseConfig = {
-  apiKey: "AIzaSyDgeIPn7nET4ulXYPBtewfCE4ASPbaVeNw",
-  authDomain: "sendable.firebaseapp.com",
-  databaseURL: "https://sendable.firebaseio.com",
-  projectId: "sendable",
-  storageBucket: "sendable.appspot.com",
-  messagingSenderId: "704326462515",
-  appId: "1:704326462515:web:e1bb889472d5fa9a858746"
-};
+// const firebaseConfig = {
+//   apiKey: "AIzaSyDgeIPn7nET4ulXYPBtewfCE4ASPbaVeNw",
+//   authDomain: "sendable.firebaseapp.com",
+//   databaseURL: "https://sendable.firebaseio.com",
+//   projectId: "sendable",
+//   storageBucket: "sendable.appspot.com",
+//   messagingSenderId: "704326462515",
+//   appId: "1:704326462515:web:e1bb889472d5fa9a858746"
+// };
 
+
+
+var fireBaseConfig: FirebaseConfig;
 
 @NgModule({
   declarations: [
@@ -37,9 +41,10 @@ const firebaseConfig = {
     AngularFirestoreModule,
     AngularFireAuthModule,
     AngularFireStorageModule,
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(FirebaseConfig)
   ],
-  providers: [],
+  providers: [FirebaseConfig
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
