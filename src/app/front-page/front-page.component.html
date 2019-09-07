@@ -1,29 +1,69 @@
-<div class="container-fluid">
-    <div class="row roboto">
-        <div class="offset-md-1 col-12 col-md-4">
-            <h3 class=" pl-3 display-2 pt-5 mt-md-5 font-weight-bold pb-3 animated pulse" >Sendable</h3>
-            <h4 class="pb-4">Your data, your hands.</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-            <button class="pl-4 pr-4" mat-raised-button color="primary">Learn More</button>
-        </div>
-        <div class="offset-md-2 col-md-4  pipedapaper">
-            <img class="pt-5" src="../../assets/unlock.svg">
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg navbar-light bg-light" style="background:#1E1F26 !important;">
+    <img src="assets/pipedapapercolor.png" class="navbar-brand mr-auto" style="width:30px; height: 40px;">
+    <a class="navbar-brand" href="#">Sendable</a>
 
-        </div>
-
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <!-- <a class="nav-link" href="#">Sign up <span class="sr-only">(current)</span></a> -->
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" (click)="login()">Login</a>
+        </li>
+        <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
+            Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a> 
+          </div>
+        </li> -->
+        <!-- <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li> -->
+      </ul>
+      <!-- <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form> -->
     </div>
+  </nav>
+
+        <div class="container-fluid">
+            <div class="row roboto">
+                <div class="offset-md-1 col-12 col-md-4">
+                    <h3 class=" pl-3 display-2 pt-5 mt-md-5 font-weight-bold pb-3 animated pulse" >Sendable</h3>
+                    <h4 class="pb-4">Your data, your hands.</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    <button class="pl-4 pr-4" mat-raised-button color="primary">Learn More</button>
+                </div>
+                <div class="offset-md-2 col-md-4  pipedapaper">
+                    <img class="pt-5" src="../../assets/unlock.svg">
+        
+                </div>
+        
+            </div>
+        
+        
+        </div>
+        <style>
+        @media only screen and (max-width: 768px) {
+          /* For mobile phones: */
+            .pipedapaper {
+                display:none;
+            }
+        }
+        /* .container-fluid {background-image: url('assets/unlock.svg');
+            background-repeat: no-repeat;
+            background-size:cover;
+        } */
+        </style>
 
 
-</div>
-<style>
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-    .pipedapaper {
-        display:none;
-    }
-}
-/* .container-fluid {background-image: url('assets/unlock.svg');
-    background-repeat: no-repeat;
-    background-size:cover;
-} */
-</style>

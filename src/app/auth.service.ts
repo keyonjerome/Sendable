@@ -43,6 +43,7 @@ export class AuthService implements CanActivate {
   async googleSignIn() {
     const provider = new auth.GoogleAuthProvider();
     const credential = await this.afAuth.auth.signInWithPopup(provider);
+    this.router.navigate(['home']);
     return this.updateUserData(credential.user);
   }
 
