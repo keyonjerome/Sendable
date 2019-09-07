@@ -17,7 +17,6 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { FirebaseConfig } from './app-config.model';
 import {MatDialogModule} from '@angular/material/dialog';
 import { APP_INITIALIZER } from '@angular/core';
-import { SideBarComponent } from './side-bar/side-bar.component';
 import {MatListModule} from '@angular/material/list';
 import { HomeComponent } from './home/home.component';
 import {MatCardModule} from '@angular/material/card';
@@ -28,7 +27,7 @@ const firebaseConfig = new FirebaseConfig().getConfig();
     AppComponent,
     LoginComponent,
     FrontPageComponent,
-    SideBarComponent,
+
     HomeComponent
   ],
   imports: [
