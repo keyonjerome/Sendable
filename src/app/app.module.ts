@@ -13,17 +13,15 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { FirebaseConfig } from './app-config.model';
 import { APP_INITIALIZER } from '@angular/core';
+import { SideBarComponent } from './side-bar/side-bar.component';
 
-
-
-
-var fireBaseConfig: FirebaseConfig;
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     FrontPageComponent,
+    SideBarComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,10 +30,9 @@ var fireBaseConfig: FirebaseConfig;
     AngularFirestoreModule,
     AngularFireAuthModule,
     AngularFireStorageModule,
-    AngularFireModule.initializeApp(FirebaseConfig)
+    AngularFireModule.initializeApp(firebaseConfig)
   ],
-  providers: [FirebaseConfig
-],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
