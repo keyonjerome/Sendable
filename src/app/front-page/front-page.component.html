@@ -1,6 +1,6 @@
 <nav class="navbar navbar-dark bg-dark navbar-expand-lg navbar-light bg-light" style="background:#1E1F26 !important;">
-    <img src="assets/pipedapapercolor.png" class="navbar-brand mr-auto" style="width:30px; height: 40px;">
-    <a class="navbar-brand" href="#">Sendable</a>
+    <img src="assets/pipedapapercolor.png" class="navbar-brand mr-3" style="width:30px; height: 40px;">
+    <a class="navbar-brand mr-auto" href="#">Sendable</a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -12,7 +12,7 @@
           <!-- <a class="nav-link" href="#">Sign up <span class="sr-only">(current)</span></a> -->
         </li>
         <li class="nav-item active">
-          <a class="nav-link" (click)="login()">Login</a>
+          <a class="nav-link active animated pulse infinite" (click)="login()">Login</a>
         </li>
         <!-- <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
@@ -42,7 +42,10 @@
                     <h3 class=" pl-3 display-2 pt-5 mt-md-5 font-weight-bold pb-3 animated pulse" >Sendable</h3>
                     <h4 class="pb-4">Your data, your hands.</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    <button class="pl-4 pr-4 mb-2" style="background:#ad3c34;" mat-raised-button color="red" (click)="login()">Sign in with Google</button>
+                    <br>
                     <button class="pl-4 pr-4" mat-raised-button color="primary">Learn More</button>
+                    
                 </div>
                 <div class="offset-md-2 col-md-4  pipedapaper">
                     <img class="pt-5" src="../../assets/unlock.svg">
