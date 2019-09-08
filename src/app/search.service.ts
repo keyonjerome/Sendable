@@ -8,7 +8,8 @@ export class SearchService {
   constructor() { }
 
 
-  search() {
+  search(searched) {
+    
     return "";
   }
 }

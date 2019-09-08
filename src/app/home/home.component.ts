@@ -1,12 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {CompanyCardComponent} from '../company-card/company-card.component'
 import { SearchService } from '../search.service';
 import {FormControl} from '@angular/forms';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
+
 export class HomeComponent implements OnInit {
   cards: {companyName: string, imageURL: string,style?:Object}[];
   companies = [{companyName:'Twitter',imageURL:'https://image.flaticon.com/icons/svg/174/174876.svg',style: Object({'background-color':'#E2E2E2'})},
@@ -16,10 +18,12 @@ export class HomeComponent implements OnInit {
   {companyName:'Shopify',imageURL:'https://image.flaticon.com/icons/svg/196/196572.svg',style: Object({'background-color':'#fcfcfa'})},
   {companyName:'InfoCanada',imageURL:'https://2z4gahrwoa-flywheel.netdna-ssl.com/wp-content/themes/infogroup/images/infocanada_logo_e_1.png',style: Object({'background-color':'#fcfcfa'})}
 ];
+  
+
   myControl = new FormControl();
   options: string[] = ['One', 'Two', 'Three'];
-  onSearch() {
-    this.searchService.search() 
+  onSearch(searched: string) {
+    this.searchService.search(searched) 
   }
   constructor(private searchService:SearchService) { 
     this.cards = this.companies;

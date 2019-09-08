@@ -44,7 +44,7 @@
 
                         </mat-form-field>
                       </form> -->
-                  <input type="text" matInput [formControl]="myControl" [matAutocomplete]="auto" placeholder="Search">
+                  <input type="text" matInput [formControl]="myControl" [matAutocomplete]="auto" placeholder="Search" [(ngModel)]="searched">
                   <mat-autocomplete #auto="matAutocomplete">
                     <mat-option *ngFor="let card of  cards" [value]="card.companyName">{{card.companyName}}</mat-option>
                   </mat-autocomplete>
@@ -54,8 +54,8 @@
                 </div>
                   <cdk-virtual-scroll-viewport class="disable-scrollbars example-viewport mt-4"  itemSize="1" >
                   <div  fxLayout="row wrap" fxLayoutWrap fxLayoutAlign="center center">
-                  <ng-container  *cdkVirtualFor="let card of cards">
-                    <app-company-card class="mb-1 mr-1" [name]="card.companyName" [imageURL]="card.imageURL"[cardStyle]="card.style"></app-company-card>
+                  <ng-container  *cdkVirtualFor="let card of cards | filter:searched"  ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}">
+                    <app-company-card class="mb-1 ml-2 mr-2" [name]="card.companyName" [imageURL]="card.imageURL"[cardStyle]="card.style"></app-company-card>
                   </ng-container>
                 </div>
                 </cdk-virtual-scroll-viewport>
@@ -75,7 +75,13 @@
 .mat-drawer-container {
   background: #ffffff !important;}
 .sidebar {
-  width:12.5vw;
+  width:15em;
+  background:#1E1F26;
+}
+@media only screen and (max-width: 600px) {
+  .sidebar {
+    display: none;
+  }
 }
 
 </style>

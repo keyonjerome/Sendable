@@ -1,0 +1,34 @@
+<h1 mat-dialog-title>{{dialogTitle}}</h1>
+
+
+<div mat-dialog-content>
+
+    <mat-form-field class="med-width" >
+        <input matInput [(formControl)]="title" placeholder="Title">
+      </mat-form-field>
+
+    <mat-form-field class="full-width">
+          <mat-label>Content</mat-label>
+          <textarea class="disable-scrollbars" [(formControl)]="content" matInput
+                    cdkTextareaAutosize
+                    #autosize="cdkTextareaAutosize"
+                    cdkAutosizeMinRows="1"></textarea>
+        </mat-form-field>
+      </div>
+
+      <div mat-dialog-actions>
+<button mat-button (click)="onCancel()">Cancel</button>
+  <button class="align-self-end"mat-button  cdkFocusInitial (click)="onSubmit()">{{sendButton}}</button>
+</div>
+
+<style>
+.full-width {
+  width: 100%;
+}
+.med-width {
+  width:60%;
+}
+.no-resize {
+  resize:none;
+}
+</style>

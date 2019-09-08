@@ -10,6 +10,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 // 1. Import the libs you need
 import { AngularFireModule, FirebaseNameOrConfigToken } from '@angular/fire';
 import { AngularFirestoreModule, AngularFirestore } from '@angular/fire/firestore';
@@ -29,7 +30,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { SearchService } from './search.service';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
-import { SidebarComponent } from './sidebar/sidebar.component'; 
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { RequestDialogComponent } from './request-dialog/request-dialog.component'; 
 // import {FormControl} from "@angular/forms";
 
 const firebaseConfig = new FirebaseConfig().getConfig();
@@ -43,7 +45,9 @@ const firebaseConfig = new FirebaseConfig().getConfig();
 
     CompanyCardComponent,
 
-    SidebarComponent
+    SidebarComponent,
+
+    RequestDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -68,6 +72,7 @@ const firebaseConfig = new FirebaseConfig().getConfig();
     ScrollingModule,
     ReactiveFormsModule,
     MatAutocompleteModule,
+    Ng2SearchPipeModule
 
   ],
   providers: [FirebaseConfig, SearchService],
