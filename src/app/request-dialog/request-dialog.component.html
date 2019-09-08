@@ -14,9 +14,10 @@
                     #autosize="cdkTextareaAutosize"
                     cdkAutosizeMinRows="1"></textarea>
         </mat-form-field>   -->
+        <ng-template #elseBlock><h6>This company does not have internal privacy access schemes. Send PIPEDA request?</h6></ng-template>
         <img [src]="data.imageURL" class="text-center center w-25 mx-auto">
-        <div *ngIf="privacyLink !=''">
-        <button mat-raised-button color="accent" class="mt-1 mb-2" ><a [target]="privacyLink">Manage privacy settings and data on their website</a> </button>
+        <div *ngIf="privacyLink !=''; else elseBlock">
+        <button mat-raised-button color="accent" class="mt-1 mb-2" ><a target="_blank" [href]="privacyLink">Manage privacy settings and data on their website</a> </button>
         
       </div>
 
