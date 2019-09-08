@@ -31,7 +31,8 @@ import { SearchService } from './search.service';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { RequestDialogComponent } from './request-dialog/request-dialog.component'; 
+import { RequestDialogComponent } from './request-dialog/request-dialog.component';
+import { ConsentDialogComponent } from './consent-dialog/consent-dialog.component'; 
 // import {FormControl} from "@angular/forms";
 
 const firebaseConfig = new FirebaseConfig().getConfig();
@@ -47,7 +48,9 @@ const firebaseConfig = new FirebaseConfig().getConfig();
 
     SidebarComponent,
 
-    RequestDialogComponent
+    RequestDialogComponent,
+
+    ConsentDialogComponent
   ],
   imports: [
     BrowserModule,
