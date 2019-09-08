@@ -75,6 +75,7 @@ const firebaseConfig = new FirebaseConfig().getConfig();
     Ng2SearchPipeModule
 
   ],
+  entryComponents:[RequestDialogComponent],
   providers: [FirebaseConfig, SearchService],
   bootstrap: [AppComponent]
 })

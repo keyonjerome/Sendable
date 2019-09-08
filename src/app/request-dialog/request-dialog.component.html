@@ -1,24 +1,29 @@
-<h1 mat-dialog-title>{{dialogTitle}}</h1>
+<h1 mat-dialog-title class="text-center">{{data.name}}</h1>
 
 
-<div mat-dialog-content>
+<div mat-dialog-content class="text-center no-resize ">
 
-    <mat-form-field class="med-width" >
+    <!-- <mat-form-field class="med-width" >
         <input matInput [(formControl)]="title" placeholder="Title">
-      </mat-form-field>
-
+      </mat-form-field> -->
+<!-- 
     <mat-form-field class="full-width">
           <mat-label>Content</mat-label>
           <textarea class="disable-scrollbars" [(formControl)]="content" matInput
                     cdkTextareaAutosize
                     #autosize="cdkTextareaAutosize"
                     cdkAutosizeMinRows="1"></textarea>
-        </mat-form-field>
+        </mat-form-field>   -->
+        <img [src]="data.imageURL" class="text-center center w-25 mx-auto">
+        <div *ngIf="privacyLink !=''">
+        <button mat-raised-button color="accent" class="mt-1 mb-2" ><a [target]="privacyLink">Manage privacy settings and data on their website</a> </button>
+        
       </div>
 
       <div mat-dialog-actions>
 <button mat-button (click)="onCancel()">Cancel</button>
-  <button class="align-self-end"mat-button  cdkFocusInitial (click)="onSubmit()">{{sendButton}}</button>
+<button class="align-self-end"mat-button  cdkFocusInitial (click)="download()">Download Template</button>
+  <button class="align-self-end"mat-button  cdkFocusInitial (click)="onSubmit()">Send {{accessOrDelete}} request</button>
 </div>
 
 <style>
@@ -30,5 +35,7 @@
 }
 .no-resize {
   resize:none;
+  height:13.5em;
+  overflow-y:visible;
 }
 </style>

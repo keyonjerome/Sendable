@@ -11,7 +11,8 @@ export class RequestDialogComponent implements OnInit {
   imageURL: string;
   name: string;
   cardStyle: string;
-  requestOrDelete: string;
+  accessOrDelete: string;
+  privacyLink:string;
   constructor(  @Inject(MAT_DIALOG_DATA) public data: any,public dialog: MatDialog, private authService: AuthService) { }
 
   ngOnInit() {
@@ -19,10 +20,20 @@ export class RequestDialogComponent implements OnInit {
       this.imageURL = this.data.imageURL;
       this.name = this.data.name;
       this.cardStyle = this.data.cardStyle;
-      this.requestOrDelete = this.data.requestOrDelete;
+      this.accessOrDelete = this.data.accessOrDelete;
+      if(this.data.privacyLink !== undefined) {
+        this.privacyLink = this.data.privacyLink;
+        console.log(this.privacyLink);
+      }
+      else {
+        this.privacyLink = '';
+        console.log("no privacyLink");
+      }
+      
     }
   }
   onCancel() {
+    this.dialog.closeAll();
 
   }
   onSubmit() {

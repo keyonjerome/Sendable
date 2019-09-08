@@ -10,8 +10,8 @@ import {FormControl} from '@angular/forms';
 })
 
 export class HomeComponent implements OnInit {
-  cards: {companyName: string, imageURL: string,style?:Object}[];
-  companies = [{companyName:'Twitter',imageURL:'https://image.flaticon.com/icons/svg/174/174876.svg',style: Object({'background-color':'#E2E2E2'})},
+  cards: {companyName: string, imageURL: string,style?:Object,email?:string,privacyLink?:string}[];
+  companies = [{companyName:'Twitter',imageURL:'https://image.flaticon.com/icons/svg/174/174876.svg',style: Object({'background-color':'#E2E2E2'}),privacyLink:'https://twitter.com/settings/account'},
   {companyName:'Snapchat',imageURL:'../../assets/snapchatlogo.png',style: Object({'background-color':'#FFFC01'})},
   {companyName:'Instagram',imageURL:'../../assets/instagramIcon.png',style: Object({'background-image':'url("../../assets/instagramGradient.png")','background-repeat':'cover'})},
   {companyName:'Facebook',imageURL:'https://image.flaticon.com/icons/svg/174/174848.svg',style: Object({'background-color':'#30508E'})},

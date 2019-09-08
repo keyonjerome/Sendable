@@ -12,6 +12,7 @@ export class CompanyCardComponent implements OnInit {
   @Input() imageURL;
   @Input() name;
   @Input() cardStyle;
+  @Input() privacyLink: string;
 
   checkForResults(name) {
     // this.searchService.search();
@@ -21,15 +22,19 @@ export class CompanyCardComponent implements OnInit {
 
   ngOnInit() {
   }
-  requestData() {
+  requestDataAccess() {
     this.dialog.open(RequestDialogComponent, {
       width: '500px',
-      data: {imageURL:this.imageURL,name:this.name}
+      
+      data: {imageURL:this.imageURL,name:this.name,cardStyle:this.cardStyle,accessOrDelete:'access',privacyLink:this.privacyLink}
     })
   }
 
-  deleteData() {
-
+  requestDataDelete() {
+    this.dialog.open(RequestDialogComponent, {
+      width: '500px',
+      data: {imageURL:this.imageURL,name:this.name,cardStyle:this.cardStyle,accessOrDelete:'delete'}
+    })
   }
   
 

@@ -11,8 +11,8 @@
           </mat-card-header>
     <mat-card-actions class="text-center align-bottom align-text-bottom">
 
-      <button mat-raised-button color="warn">DELETE</button>
-      <button mat-raised-button color="primary">REQUEST</button>
+      <button mat-raised-button color="warn"(click)="requestDataDelete()">DELETE</button>
+      <button mat-raised-button color="primary" (click)="requestDataAccess()">ACCESS</button>
     </mat-card-actions>
   </mat-card>
 
