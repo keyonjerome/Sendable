@@ -26,6 +26,10 @@ import {ScrollingModule} from '@angular/cdk/scrolling';
 import { CompanyCardComponent } from './company-card/company-card.component';
 import {MatInputModule} from '@angular/material/input'; 
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { SearchService } from './search.service';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatAutocompleteModule} from '@angular/material/autocomplete'; 
+// import {FormControl} from "@angular/forms";
 
 const firebaseConfig = new FirebaseConfig().getConfig();
 @NgModule({
@@ -42,6 +46,7 @@ const firebaseConfig = new FirebaseConfig().getConfig();
     BrowserModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
+    FormsModule,
     AppRoutingModule,
     MatButtonModule,
     MatCardModule,
@@ -58,9 +63,11 @@ const firebaseConfig = new FirebaseConfig().getConfig();
     AngularFireModule.initializeApp(firebaseConfig),
     RouterModule,
     ScrollingModule,
+    ReactiveFormsModule,
+    MatAutocompleteModule,
 
   ],
-  providers: [FirebaseConfig],
+  providers: [FirebaseConfig, SearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

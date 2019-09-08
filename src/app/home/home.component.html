@@ -20,11 +20,25 @@
 </nav>
 
   <div class="text-center">
-    <input type="text" placeholder="Search">
-    <button mat-icon-button aria-label="Example icon-button with a heart icon" (click)="onSearch()">
-        <img class="pt-20" src="../../assets/24px.svg">
+      <!-- <form class="example-form" class="text-center">
+          <mat-form-field class="example-full-width">
+            <input type="text" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+            
+            <mat-autocomplete #auto="matAutocomplete">
+              <mat-option *ngFor="let option of options" [value]="option">
+                {{option}}
+              </mat-option>
+            </mat-autocomplete>
 
-      </button>
+          </mat-form-field>
+        </form> -->
+    <input type="text" matInput [formControl]="myControl" [matAutocomplete]="auto" placeholder="Search">
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let companyName of companies" [value]="companyName">{{companyName}}</mat-option>
+    </mat-autocomplete>
+    <button mat-icon-button aria-label="Example icon-button with a heart icon" (click)="onSearch()" style="white-space: nowrap !important;">
+                <img class="" src="../../assets/24px.svg" style="white-space: nowrap !important;">
+              </button>
   </div>
 
 <div class="container-fluid">
@@ -38,7 +52,7 @@
                 <cdk-virtual-scroll-viewport class="disable-scrollbars example-viewport mt-4"  itemSize="1" >
                     <div  fxLayout="row wrap" fxLayoutWrap fxLayoutAlign="center center">
                     <ng-container  *cdkVirtualFor="let card of cards">
-                      <app-company-card class="mb-1 mr-1" [name]="card.companyName" [imageURL]="card.imageURL"[cardStyle]="{card.style}"></app-company-card>
+                      <app-company-card class="mb-1 mr-1" [name]="card.companyName" [imageURL]="card.imageURL"[cardStyle]="card.style"></app-company-card>
                     </ng-container>
                   </div>
                   </cdk-virtual-scroll-viewport>
