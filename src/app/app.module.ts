@@ -16,7 +16,7 @@ import { AngularFireModule, FirebaseNameOrConfigToken } from '@angular/fire';
 import { AngularFirestoreModule, AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
-import { FirebaseConfig } from './app-config.model';
+// import { FirebaseConfig } from './app-config.model';
 import {MatDialogModule} from '@angular/material/dialog';
 import { APP_INITIALIZER } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -84,7 +84,7 @@ const firebaseConfig =  {
 
   ],
   entryComponents:[RequestDialogComponent],
-  providers: [FirebaseConfig, SearchService],
+  providers: [SearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
