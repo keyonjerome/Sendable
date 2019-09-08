@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
   {companyName:'InfoCanada',imageURL:'https://2z4gahrwoa-flywheel.netdna-ssl.com/wp-content/themes/infogroup/images/infocanada_logo_e_1.png',style: Object({'background-color':'#fcfcfa'})}
 ];
   
-
+searched:string;
   myControl = new FormControl();
   options: string[] = ['One', 'Two', 'Three'];
   onSearch(searched: string) {
