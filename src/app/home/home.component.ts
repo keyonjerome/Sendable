@@ -13,7 +13,8 @@ export class HomeComponent implements OnInit {
   {companyName:'Snapchat',imageURL:'../../assets/snapchatlogo.png',style: Object({'background-color':'#FFFC01'})},
   {companyName:'Instagram',imageURL:'../../assets/instagramIcon.png',style: Object({'background-image':'url("../../assets/instagramGradient.png")','background-repeat':'cover'})},
   {companyName:'Facebook',imageURL:'https://image.flaticon.com/icons/svg/174/174848.svg',style: Object({'background-color':'#30508E'})},
-  {companyName:'Shopify',imageURL:'https://image.flaticon.com/icons/svg/196/196572.svg',style: Object({'background-color':'#fcfcfa'})}
+  {companyName:'Shopify',imageURL:'https://image.flaticon.com/icons/svg/196/196572.svg',style: Object({'background-color':'#fcfcfa'})},
+  {companyName:'InfoCanada',imageURL:'https://2z4gahrwoa-flywheel.netdna-ssl.com/wp-content/themes/infogroup/images/infocanada_logo_e_1.png',style: Object({'background-color':'#fcfcfa'})}
 ];
   myControl = new FormControl();
   options: string[] = ['One', 'Two', 'Three'];

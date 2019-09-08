@@ -28,7 +28,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { SearchService } from './search.service';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {MatAutocompleteModule} from '@angular/material/autocomplete'; 
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { SidebarComponent } from './sidebar/sidebar.component'; 
 // import {FormControl} from "@angular/forms";
 
 const firebaseConfig = new FirebaseConfig().getConfig();
@@ -40,7 +41,9 @@ const firebaseConfig = new FirebaseConfig().getConfig();
 
     HomeComponent,
 
-    CompanyCardComponent
+    CompanyCardComponent,
+
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
