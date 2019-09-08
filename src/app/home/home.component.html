@@ -38,7 +38,7 @@
         <mat-drawer-content>
 
           <div class="text-center pt-4">
-            <h1 class="text-body float-left pl-2">Companies</h1>
+            <h1 class="text-body float-left pl-4 mb-2 roboto font-weight-bold">Companies</h1>
             <!-- <form class="example-form" class="text-center">
                         <mat-form-field class="example-full-width">
                           <input type="text" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
@@ -57,8 +57,8 @@
               <mat-option *ngFor="let card of  cards" [value]="card.companyName">{{card.companyName}}</mat-option>
             </mat-autocomplete>
             <button class="float-right mr-1 "mat-icon-button aria-label="Example icon-button with a heart icon" (click)="onSearch()"
-              style="white-space: nowrap !important; margin-bottom:-4em !important">
-              <img class="" src="../../assets/magnifying-glass.svg" width="20px"
+              style="white-space: nowrap !important">
+              <img class="glass mb-2" src="../../assets/magnifying-glass.svg" width="20px"
                 style="white-space: nowrap !important;">
             </button>
            
@@ -98,6 +98,8 @@
     .sidebar {
       display: none;
     }
+  }
+  .glass {
   }
 
 </style>
