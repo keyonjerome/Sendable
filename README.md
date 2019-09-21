@@ -1,4 +1,9 @@
 # Sendable
+Take control of your data now at https://sendable.online
+
+PIPEDA is an acronym for a Canadian legislation concerning the digital privacy of citizens, and is updated every five years to reflect growing changes in technology. Recently, changes to the PIPEDA legislation have allowed Canadians to ask companies for detailed information on which of their private data a company holds, as well as given them the ability to ask the company to delete all of their user data. Unfortunately, the process of researching addresses to company-support emails and writing every individual message is a lengthy one, particularly when the average Canadian is signed up for dozens of services. Sendable is an Angular-based web which aims to take the hassle and hustle out of the right to data ownership all Canadians should have.
+
+Sendable was made possible through APIs and services such as Firebase Firestore, Google Cloud Platforms, Domain.com, Gmail API.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.3.
 
