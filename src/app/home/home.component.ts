@@ -17,6 +17,11 @@ export class HomeComponent implements OnInit {
   {companyName:'Facebook',imageURL:'https://image.flaticon.com/icons/svg/174/174848.svg',style: Object({'background-color':'#30508E'})},
   {companyName:'Shopify',imageURL:'https://image.flaticon.com/icons/svg/196/196572.svg',style: Object({'background-color':'#fcfcfa'})},
   {companyName:'InfoCanada',imageURL:'https://2z4gahrwoa-flywheel.netdna-ssl.com/wp-content/themes/infogroup/images/infocanada_logo_e_1.png',style: Object({'background-color':'#fcfcfa'})}
+  ,{companyName:'Amazon',imageURL:'../../assets/amazonLogo.png',style: Object({'background-color':'#0F0F0F'})}
+  ,{companyName:'YouTube',imageURL:'../../assets/youtubeIcon.png',style: Object({'background-color':'#EBEBEB'})}
+  ,{companyName:'eBay',imageURL:'../../assets/eBayLogo.png',style: Object({'background-color':'#F0F0F0'})}
+  ,{companyName:'kijiji',imageURL:'../../assets/kijijiLogo.png',style: Object({'background-color':'#CA64D2'})}
+  ,{companyName:'Pinterest',imageURL:'../../assets/pinterestLogo.png',style: Object({'background-color':'#BD081C'})}
 ];
   
 searched:string;
